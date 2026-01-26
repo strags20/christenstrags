@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christen Strags | Keynote Speaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A1F44;
+            --gold: #F4B942;
+            --burgundy: #8B1E3F;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --gray: #4B5563;
+            --light-gray: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--navy);
+            background: var(--off-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header/Nav */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            letter-spacing: 2px;
+        }
+
+        nav .logo span {
+            color: var(--gold);
+        }
+
+        nav .cta-button {
+            background: var(--burgundy);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav .cta-button:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(244, 185, 66, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--navy) 0%, #1a2f4d 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(244, 185, 66, 0.08) 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .hero .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--gold);
+            display: block;
+        }
+
+        .hero-content h1 .accent {
+            color: var(--burgundy);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: slideInLeft 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            animation: slideInLeft 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: slideInLeft 0.8s ease-out 0.6s backwards;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--burgundy);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(244, 185, 66, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideInRight 0.8s ease-out 0.3s backwards;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--gold);
+        }
+
+        .stat-badge {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--gold);
+        }
+
+        .stat-badge.top-left {
+            top: -20px;
+            left: -40px;
+        }
+
+        .stat-badge.bottom-right {
+            bottom: -20px;
+            right: -40px;
+        }
+
+        .stat-badge .number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .stat-badge .label {
+            font-size: 0.9rem;
+            color: var(--navy);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Credentials Section */
+        .credentials {
+            padding: 6rem 2rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .credentials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, var(--gold) 1px, transparent 1px),
+                linear-gradient(0deg, var(--gold) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.03;
+        }
+
+        .credentials .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--navy);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .section-title .highlight {
+            color: var(--gold);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .credential-card {
+            background: var(--off-white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--gold);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: var(--gold);
+            opacity: 0.05;
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .credential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--burgundy);
+        }
+
+        .credential-card .number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-card .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-card .description {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Keynote Section */
+        .keynote {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy) 0%, #1a2f4d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .keynote::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(244, 185, 66, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .keynote .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .keynote-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .keynote-content h2 .highlight {
+            color: var(--gold);
+            display: block;
+        }
+
+        .keynote-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .keynote-content p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .keynote-themes {
+            margin-top: 2.5rem;
+        }
+
+        .theme-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .theme-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(10px);
+        }
+
+        .theme-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            min-width: 40px;
+        }
+
+        .theme-text h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .theme-text p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .keynote-image {
+            position: relative;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--gold);
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(244, 185, 66, 0.15), rgba(139, 30, 63, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-placeholder:hover {
+            background: linear-gradient(135deg, rgba(244, 185, 66, 0.25), rgba(139, 30, 63, 0.25));
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: var(--burgundy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .video-placeholder:hover .play-button {
+            transform: scale(1.1);
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .video-label {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Sports Bra Strength Section */
+        .sports-bra-strength {
+            padding: 6rem 2rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .sports-bra-strength .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sbs-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .sbs-text h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .sbs-text h3 .highlight {
+            color: var(--gold);
+        }
+
+        .sbs-text p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+
+
+        .client-logos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .client-item {
+            background: var(--off-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .client-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--burgundy);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .client-item h4 {
+            color: var(--navy);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .client-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .sbs-image {
+            position: relative;
+        }
+
+        .sbs-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: var(--off-white);
+        }
+
+        .testimonials .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border-top: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-info h5 {
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: var(--navy);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy) 0%, #1a2f4d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 30, 63, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section .container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .cta-section h2 .highlight {
+            color: var(--gold);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        footer .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        footer .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        footer .logo span {
+            color: var(--gold);
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero .container,
+            .keynote .container,
+            .sbs-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .section-title,
+            .keynote-content h2,
+            .cta-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .stat-badge {
+                position: static;
+                margin: 1rem auto;
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav .cta-button {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .credentials-grid,
+            .client-logos {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">CHRISTEN <span>STRAGS</span></div>
+            <a href="#contact" class="cta-button">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    HOW THE <span class="highlight">UNDERDOGS</span>
+                    BECOME <span class="accent">ELITE</span>
+                </h1>
+                <p class="tagline">Former WNBA Strength Coach | Keynote Speaker</p>
+                <p>I transformed overlooked athletes into All-Stars and Olympians. Now I teach women in business the same performance playbook—the mindset, daily habits, and behind-the-scenes work that separates high performers from everyone else.</p>
+                <div class="hero-buttons">
+                    <a href="#keynote" class="btn-primary">Explore Keynote</a>
+                    <a href="#speaking-clients" class="btn-secondary">See Who I've Worked With</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop" alt="Christen Strags Speaking">
+                <div class="stat-badge top-left">
+                    <div class="number">8</div>
+                    <div class="label">Olympians Trained</div>
+                </div>
+                <div class="stat-badge bottom-right">
+                    <div class="number">7</div>
+                    <div class="label">WNBA Seasons</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="credentials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Elite Credentials</div>
+                <h2 class="section-title">Proven Track Record of <span class="highlight">Championship Results</span></h2>
+            </div>
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="number">7</div>
+                    <div class="title">WNBA Seasons</div>
+                    <div class="description">Head strength coach developing elite athletes at the highest level of women's professional basketball</div>
+                </div>
+                <div class="credential-card">
+                    <div class="number">15+</div>
+                    <div class="title">WNBA All-Star Selections</div>
+                    <div class="description">Trained athletes who earned multiple All-Star honors including A'ja Wilson, Kelsey Plum, and Dearica Hamby</div>
+                </div>
+                <div class="credential-card">
+                    <div class="number">8</div>
+                    <div class="title">Olympians Trained</div>
+                    <div class="description">Prepared athletes competing for 5 different countries at the highest international stage</div>
+                </div>
+                <div class="credential-card">
+                    <div class="number">2</div>
+                    <div class="title">Hall of Famers</div>
+                    <div class="description">Trained basketball legends including Becky Hammon—coaches and players at the pinnacle of the sport</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keynote Section -->
+    <section id="keynote" class="keynote">
+        <div class="container">
+            <div class="keynote-content">
+                <h2>THE <span class="highlight">UNDRAFTED</span> KEYNOTE</h2>
+                <p class="subtitle">How The Underdogs Become Elite and How You Can Too</p>
+                <p>I reveal the mindset, training strategies, and daily habits that transform overlooked athletes into All-Stars and Olympians—and show women how to apply these same principles to their careers, health, and lives.</p>
+                <p>This is a performance playbook rooted in real stories from elite sports, backed by science, and designed to be immediately actionable. I teach your team how to perform under pressure, build sustainable resilience, and invest in the behind-the-scenes work that separates high performers from everyone else.</p>
+                <p>Your audience will walk away with frameworks for better sleep, recovery, and preparation they can use the next day to show up stronger, stay consistent, and thrive in high-stakes environments. They'll leave ready to perform, not just motivated to try.</p>
+                
+                <div class="keynote-themes">
+                    <div class="theme-item">
+                        <div class="theme-icon">💪</div>
+                        <div class="theme-text">
+                            <h4>Redefine Mental Toughness</h4>
+                            <p>Discover why elite athletes balance grit with grace, knowing when to push and when to recover</p>
+                        </div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-icon">🎯</div>
+                        <div class="theme-text">
+                            <h4>Master The Fundamentals</h4>
+                            <p>Adopt the daily habits top performers use to stay consistent, recover smart, and avoid burnout</p>
+                        </div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-icon">⚡</div>
+                        <div class="theme-text">
+                            <h4>Own Your Preparation</h4>
+                            <p>Stop waiting for permission or validation and start investing in the unseen work that creates lasting results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="keynote-image">
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                        <div class="video-label">Watch Demo Reel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking Clients Section -->
+    <section id="speaking-clients" class="sports-bra-strength">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Trusted By</div>
+                <h2 class="section-title">Organizations I've <span class="highlight">Empowered</span></h2>
+            </div>
+            <div class="sbs-content">
+                <div class="sbs-text">
+                    <h3>Speaking <span class="highlight">Engagements</span></h3>
+                    <p>From corporate boardrooms to athletic departments, I've delivered keynotes and workshops that transform how teams think about performance, resilience, and competitive excellence.</p>
+                    <p>My clients don't want another motivational speaker—they want actionable frameworks from someone who's built champions at the highest level.</p>
+                    
+                    <div class="client-logos">
+                        <div class="client-item">
+                            <h4>USA Basketball</h4>
+                            <p>National Team Program</p>
+                        </div>
+                        <div class="client-item">
+                            <h4>KPMG</h4>
+                            <p>Big 5 Accounting Firm</p>
+                        </div>
+                        <div class="client-item">
+                            <h4>NAWBO San Antonio</h4>
+                            <p>Women Business Owners</p>
+                        </div>
+                        <div class="client-item">
+                            <h4>San Antonio Spurs Non-Profit</h4>
+                            <p>Community Leadership</p>
+                        </div>
+                        <div class="client-item">
+                            <h4>Illinois Human Performance Project</h4>
+                            <p>Athletic Performance</p>
+                        </div>
+                        <div class="client-item">
+                            <h4>Thriving Women's Conference</h4>
+                            <p>Women's Leadership</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sbs-image">
+                    <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?w=800&h=1000&fit=crop" alt="Christen Speaking at Event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Client Impact</div>
+                <h2 class="section-title">What <span class="highlight">Champions Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Chrissy is super passionate about her craft and development of you as an athlete... I always knew she would get the best out of me even on days I didn't want to!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Dearica Hamby</h5>
+                            <p>USA Olympian, LA Sparks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Chrissy had the rare combination of elite training expertise, endless passion for sports performance, and the ability to motivate our WNBA players to maximize their potential."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Ruth Riley</h5>
+                            <p>Former WNBA GM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "You challenged us to reflect and realign our goals to build the kind of intentional mindset that fuels long-term growth and success. The feedback from our members has been overwhelmingly positive."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Melissa Mastrodomenico</h5>
+                            <p>President, NAWBO San Antonio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Chrissy made a real impact on the women! She was quoted and referenced the rest of the day. I know that I have personally made better decisions since then."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Lisa Hansen</h5>
+                            <p>Founder, Thriving Women's Conference</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Christen, on behalf of the Illinois Human Performance Project team... Thank you! We appreciate your time, energy and expertise and we know our audience does too! We can't wait to partner again and are officially Strags fans for life!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Abbie Lee</h5>
+                            <p>Project Lead, Illinois Human Performance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Wow! Christen is incredible! I loved her talk. 'Prepare to separate.' Words to live by."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h5>Erin Callahan</h5>
+                            <p>Speech Attendee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to <span class="highlight">Level Up</span> Your Team?</h2>
+            <p>Whether you're booking a keynote for your conference, workshop for your team, or exploring partnership opportunities—let's build something exceptional together.</p>
+            <div class="cta-buttons">
+                <a href="mailto:christen@sportsbra.strength" class="btn-primary">Book Speaking Engagement</a>
+                <a href="#" class="btn-secondary">Download Speaker Sheet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">CHRISTEN <span>STRAGS</span></div>
+            <p>© 2026 Christen Strags. Former WNBA Strength Coach | Keynote Speaker | Founder, Sports Bra Strength</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.credential-card, .testimonial-card, .theme-item, .client-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
