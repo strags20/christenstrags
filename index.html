@@ -204,10 +204,12 @@
 
         .hero-image img {
             width: 100%;
+            max-width: 500px;
             height: auto;
             border-radius: 20px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
             border: 3px solid var(--gold);
+            object-fit: contain;
         }
 
         .stat-badge {
@@ -248,7 +250,7 @@
         /* Credentials Section */
         .credentials {
             padding: 6rem 2rem;
-            background: linear-gradient(rgba(10, 31, 68, 0.92), rgba(10, 31, 68, 0.92)), url('IMG_4653.JPG');
+            background: linear-gradient(rgba(10, 31, 68, 0.92), rgba(10, 31, 68, 0.92)), url('IMG_4654.JPG');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -288,20 +290,28 @@
         .section-label {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.2rem;
-            color: var(--gold);
+            color: var(--burgundy);
             letter-spacing: 3px;
             margin-bottom: 1rem;
             text-transform: uppercase;
+        }
+
+        .credentials .section-label {
+            color: var(--gold);
         }
 
         .section-title {
             font-family: 'Outfit', sans-serif;
             font-size: 3.5rem;
             font-weight: 900;
-            color: var(--white);
+            color: var(--navy);
             line-height: 1.1;
             text-transform: uppercase;
             letter-spacing: -1px;
+        }
+
+        .credentials .section-title {
+            color: var(--white);
         }
 
         .section-title .highlight {
@@ -528,6 +538,109 @@
             letter-spacing: 2px;
         }
 
+        /* Additional Keynotes Section */
+        .additional-keynotes {
+            padding: 6rem 2rem;
+            background: var(--off-white);
+        }
+
+        .additional-keynotes .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .keynote-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .keynote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-left-color: var(--burgundy);
+        }
+
+        .keynote-card-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .keynote-type {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .keynote-card-content p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .keynote-card-audience {
+            background: var(--off-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 3px solid var(--burgundy);
+        }
+
+        .keynote-card-audience strong {
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .takeaways-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .takeaway-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--off-white);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .takeaway-item:hover {
+            background: rgba(244, 185, 66, 0.1);
+            transform: translateX(5px);
+        }
+
+        .takeaway-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            min-width: 25px;
+        }
+
+        .takeaway-item span:last-child {
+            color: var(--navy);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
         /* Sports Bra Strength Section */
         .sports-bra-strength {
             padding: 6rem 2rem;
@@ -610,7 +723,9 @@
 
         .sbs-image img {
             width: 100%;
-            height: auto;
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
             border-radius: 15px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
@@ -891,7 +1006,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Strags Headshot Clear Background.PNG" alt="Christen Strags">
+                <img src="Strags%20Headshot%20Clear%20Background.PNG" alt="Christen Strags">
             </div>
         </div>
     </section>
@@ -964,9 +1079,74 @@
             </div>
             <div class="keynote-image">
                 <div class="video-wrapper">
-                    <div class="video-placeholder">
-                        <div class="play-button">▶</div>
-                        <div class="video-label">Watch Demo Reel</div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EVxXycZ7gIk?si=gnpU6hOCTMYI9oN6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; border-radius: 15px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Keynotes Section -->
+    <section class="additional-keynotes">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Additional Offerings</div>
+                <h2 class="section-title">Workshops & <span class="highlight">Keynotes</span></h2>
+            </div>
+
+            <!-- Keynote 1: Peak Performance Hacks -->
+            <div class="keynote-card">
+                <div class="keynote-card-content">
+                    <h3>The Core 5 Formula for Energy, Wellness and Peak Performance</h3>
+                    <p class="keynote-type">Keynote</p>
+                    <p>Success starts with energy, and most professionals are running on empty. I break down the habits of elite athletes into five simple pillars anyone can follow: strength & conditioning, nutrition, sleep, hydration, and mindfulness.</p>
+                    <p>This keynote delivers practical, science-backed strategies that help your team recharge, manage stress, and maximize both wellness and performance.</p>
+                    
+                    <div class="keynote-card-audience">
+                        <strong>Ideal For:</strong> Wellness programs, leadership and success programs, corporate teams prioritizing employee health and performance
+                    </div>
+
+                    <div class="takeaways-grid">
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>Apply the Core 5 to boost energy, focus, and stamina</span>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>Build wellness habits that fit demanding professional schedules</span>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>Learn how small health habits compound into big performance outcomes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 2: Choices, Trades, and Mindset -->
+            <div class="keynote-card">
+                <div class="keynote-card-content">
+                    <h3>The Key to Confidence: Choices, Trades, and the Mindset to Win</h3>
+                    <p class="keynote-type">Interactive Workshop</p>
+                    <p>Start the year strong with an interactive workshop designed to help audiences build energy, focus, and lasting confidence. I guide teams to understand how everyday choices and intentional "trades" impact stamina, performance, and mindset.</p>
+                    <p>Through practical strategies inspired by elite performers, participants learn how to quiet self-doubt, maintain wellness, and sustain momentum—not just in January, but all year long.</p>
+                    
+                    <div class="keynote-card-audience">
+                        <strong>Ideal For:</strong> Leadership programs, emerging leaders, DEI resource groups, and teams looking to boost confidence, decision-making, and engagement
+                    </div>
+
+                    <div class="takeaways-grid">
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>A simple framework to make confident, intentional decisions</span>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>Strategies to boost energy, wellness, and stamina</span>
+                        </div>
+                        <div class="takeaway-item">
+                            <span class="takeaway-icon">✓</span>
+                            <span>A personal plan to maintain confidence and momentum all year</span>
+                        </div>
                     </div>
                 </div>
             </div>
