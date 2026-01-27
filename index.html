@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christen Strags | Keynote Speaker</title>
+    <title>Christen Strags | Keynote Speaker | Former WNBA Strength Coach</title>
+    <meta name="description" content="Former WNBA Strength Coach Christen Strags delivers keynote speeches on mental toughness, peak performance, and leadership. Book speaking engagements for corporate events, conferences, and workshops.">
+    <meta name="keywords" content="keynote speaker, motivational speaker, WNBA coach, leadership speaker, performance coach, mental toughness, corporate speaker, women's empowerment speaker">
+    <meta name="author" content="Christen Strags">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://christenstrags.com/">
+    <meta property="og:title" content="Christen Strags | Keynote Speaker | Former WNBA Strength Coach">
+    <meta property="og:description" content="I helped overlooked athletes transform into All-Stars and Olympians. Now I teach women in business the same performance playbook.">
+    <meta property="og:image" content="https://christenstrags.com/Strags%20Headshot%20Clear%20Background.PNG">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Christen Strags | Keynote Speaker">
+    <meta name="twitter:description" content="Former WNBA Strength Coach delivering keynotes on mental toughness and peak performance.">
+    <meta name="twitter:image" content="https://christenstrags.com/Strags%20Headshot%20Clear%20Background.PNG">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://christenstrags.com/">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Accessibility: Language -->
+    <html lang="en">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christen Strags",
+      "jobTitle": "Keynote Speaker",
+      "description": "Former WNBA Strength Coach and keynote speaker specializing in mental toughness, peak performance, and leadership development",
+      "url": "https://christenstrags.com",
+      "image": "https://christenstrags.com/Strags%20Headshot%20Clear%20Background.PNG",
+      "email": "info@christenstrags.com",
+      "alumniOf": "WNBA",
+      "knowsAbout": ["Leadership", "Mental Toughness", "Peak Performance", "Athletic Training", "Women's Empowerment"],
+      "sameAs": [
+        "https://www.instagram.com/christenstrags",
+        "https://www.linkedin.com/in/christenstrags"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Professional Speaker",
+        "description": "Delivers keynote speeches on mental toughness, peak performance, and leadership"
+      }
+    }
+    </script>
     <style>
         :root {
             --navy: #0A1F44;
@@ -30,6 +79,23 @@
             background: var(--off-white);
             overflow-x: hidden;
             line-height: 1.6;
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Header/Nav */
@@ -162,15 +228,16 @@
         }
 
         .btn-primary, .btn-secondary {
-            padding: 1rem 2.5rem;
+            padding: 1rem 1.75rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             display: inline-block;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -183,6 +250,14 @@
             color: var(--navy);
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(244, 185, 66, 0.4);
+        }
+
+        .btn-primary:focus,
+        .btn-secondary:focus,
+        a:focus,
+        button:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
         }
 
         .btn-secondary {
@@ -1125,19 +1200,24 @@
     </style>
 </head>
 <body>
+    <!-- Skip to main content for screen readers (accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="logo">CHRISTEN <span>STRAGS</span></div>
             <a href="#contact" class="cta-button">Book Now</a>
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="container">
             <div class="hero-content">
-                <h1>
+                <h1 id="hero-heading">
                     HOW THE <span class="highlight">UNDERDOGS</span>
                     BECOME <span class="accent">ELITE</span>
                 </h1>
@@ -1149,7 +1229,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Strags%20Headshot%20Clear%20Background.PNG" alt="Christen Strags">
+                <img src="Strags%20Headshot%20Clear%20Background.PNG" alt="Christen Strags, former WNBA strength coach and keynote speaker, professional headshot">
             </div>
         </div>
     </section>
@@ -1231,7 +1311,7 @@
                 <h2 class="section-title">Demo <span class="highlight">Reel</span></h2>
             </div>
             <div class="video-container">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EVxXycZ7gIk?si=gnpU6hOCTMYI9oN6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; border-radius: 15px;"></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EVxXycZ7gIk?si=gnpU6hOCTMYI9oN6" title="Christen Strags Speaker Demo Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; border-radius: 15px;"></iframe>
             </div>
         </div>
     </section>
@@ -1343,7 +1423,7 @@
                     </div>
                 </div>
                 <div class="sbs-image">
-                    <img src="2X6A3678.jpg" alt="Christen Speaking at Event">
+                    <img src="2X6A3678.jpg" alt="Christen Strags delivering keynote speech on stage at corporate event">
                 </div>
             </div>
         </div>
@@ -1357,7 +1437,7 @@
                 <h2 class="section-title">What <span class="highlight">Champions Say</span></h2>
             </div>
             <div class="testimonials-carousel">
-                <button class="carousel-btn prev" onclick="moveTestimonial(-1)">‹</button>
+                <button class="carousel-btn prev" onclick="moveTestimonial(-1)" aria-label="Previous testimonial">‹</button>
                 <div class="testimonials-wrapper">
                     <div class="testimonial-card active">
                         <div class="testimonial-text">
@@ -1426,15 +1506,15 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn next" onclick="moveTestimonial(1)">›</button>
+                <button class="carousel-btn next" onclick="moveTestimonial(1)" aria-label="Next testimonial">›</button>
             </div>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentTestimonial(0)"></span>
-                <span class="dot" onclick="currentTestimonial(1)"></span>
-                <span class="dot" onclick="currentTestimonial(2)"></span>
-                <span class="dot" onclick="currentTestimonial(3)"></span>
-                <span class="dot" onclick="currentTestimonial(4)"></span>
-                <span class="dot" onclick="currentTestimonial(5)"></span>
+            <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+                <span class="dot active" onclick="currentTestimonial(0)" role="tab" aria-label="Testimonial 1" aria-selected="true"></span>
+                <span class="dot" onclick="currentTestimonial(1)" role="tab" aria-label="Testimonial 2" aria-selected="false"></span>
+                <span class="dot" onclick="currentTestimonial(2)" role="tab" aria-label="Testimonial 3" aria-selected="false"></span>
+                <span class="dot" onclick="currentTestimonial(3)" role="tab" aria-label="Testimonial 4" aria-selected="false"></span>
+                <span class="dot" onclick="currentTestimonial(4)" role="tab" aria-label="Testimonial 5" aria-selected="false"></span>
+                <span class="dot" onclick="currentTestimonial(5)" role="tab" aria-label="Testimonial 6" aria-selected="false"></span>
             </div>
         </div>
     </section>
@@ -1450,9 +1530,10 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="logo">CHRISTEN <span>STRAGS</span></div>
             <p>© 2026 Christen Strags. Former WNBA Strength Coach | Keynote Speaker | Founder, Sports Bra Strength</p>
