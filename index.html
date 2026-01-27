@@ -808,26 +808,87 @@
             margin: 0 auto;
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+        .testimonials-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .testimonials-wrapper {
+            overflow: hidden;
+            position: relative;
         }
 
         .testimonial-card {
+            display: none;
             background: var(--white);
-            padding: 2.5rem;
+            padding: 3rem;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             position: relative;
             border-top: 4px solid var(--gold);
+            min-height: 250px;
+        }
+
+        .testimonial-card.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .carousel-btn:hover {
+            background: var(--burgundy);
+            color: var(--white);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-btn.prev {
+            left: -70px;
+        }
+
+        .carousel-btn.next {
+            right: -70px;
+        }
+
+        .carousel-dots {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        .dot.active,
+        .dot:hover {
+            background-color: var(--gold);
+            transform: scale(1.2);
         }
 
         .testimonial-card::before {
@@ -1038,8 +1099,18 @@
                 grid-template-columns: 1fr;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .carousel-btn.prev {
+                left: -10px;
+            }
+
+            .carousel-btn.next {
+                right: -10px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
             }
 
             .cta-buttons {
@@ -1071,9 +1142,9 @@
                     BECOME <span class="accent">ELITE</span>
                 </h1>
                 <p class="tagline">Former WNBA Strength Coach | Keynote Speaker</p>
-                <p>I transformed overlooked athletes into All-Stars and Olympians. Now I teach women in business the same performance playbook—the mindset, daily habits, and behind-the-scenes work that separates high performers from everyone else.</p>
+                <p>I helped transformed overlooked athletes into All-Stars and Olympians. Now I teach women in business the same performance playbook: the mindset, daily habits, and behind-the-scenes work that separates high performers from everyone else.</p>
                 <div class="hero-buttons">
-                    <a href="#keynote" class="btn-primary">Explore Keynote</a>
+                    <a href="#keynote" class="btn-primary">Explore My Keynote</a>
                     <a href="#speaking-clients" class="btn-secondary">See Who I've Worked With</a>
                 </div>
             </div>
@@ -1099,7 +1170,7 @@
                 <div class="credential-card">
                     <div class="number">15+</div>
                     <div class="title">WNBA All-Star Selections</div>
-                    <div class="description">Trained athletes who earned multiple All-Star honors including A'ja Wilson, Kelsey Plum, and Dearica Hamby</div>
+                    <div class="description">Trained athletes who earned multiple All-Star honors including Kelsey Plum, Dearica Hamby, and Kayla McBride</div>
                 </div>
                 <div class="credential-card">
                     <div class="number">8</div>
@@ -1119,11 +1190,11 @@
     <section id="keynote" class="keynote">
         <div class="container">
             <div class="keynote-content-full">
-                <h2>THE <span class="highlight">UNDRAFTED</span> KEYNOTE</h2>
+                <h2>THE <span class="highlight">UNDRAFTED</span> SIGNATURE KEYNOTE</h2>
                 <p class="subtitle">How The Underdogs Become Elite and How You Can Too</p>
                 <p>I reveal the mindset, training strategies, and daily habits that transform overlooked athletes into All-Stars and Olympians—and show women how to apply these same principles to their careers, health, and lives.</p>
                 <p>This is a performance playbook rooted in real stories from elite sports, backed by science, and designed to be immediately actionable. I teach your team how to perform under pressure, build sustainable resilience, and invest in the behind-the-scenes work that separates high performers from everyone else.</p>
-                <p>Your audience will walk away with frameworks for better sleep, recovery, and preparation they can use the next day to show up stronger, stay consistent, and thrive in high-stakes environments. They'll leave ready to perform, not just motivated to try.</p>
+                <p>Your audience will walk away with frameworks for preparation and execution they can use the next day to show up stronger, stay consistent, and thrive in high-stakes environments. They'll leave ready to perform, not just motivated to try.</p>
                 
                 <div class="keynote-themes">
                     <div class="theme-item">
@@ -1170,7 +1241,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Additional Offerings</div>
-                <h2 class="section-title">Workshops & <span class="highlight">Keynotes</span></h2>
+                <h2 class="section-title">Other Keynotes and <span class="highlight">Workshops</span></h2>
             </div>
 
             <!-- Keynote 1: Peak Performance Hacks -->
@@ -1207,8 +1278,8 @@
                 <div class="keynote-card-content">
                     <h3>The Key to Confidence: Choices, Trades, and the Mindset to Win</h3>
                     <p class="keynote-type">Interactive Workshop</p>
-                    <p>Start the year strong with an interactive workshop designed to help audiences build energy, focus, and lasting confidence. I guide teams to understand how everyday choices and intentional "trades" impact stamina, performance, and mindset.</p>
-                    <p>Through practical strategies inspired by elite performers, participants learn how to quiet self-doubt, maintain wellness, and sustain momentum—not just in January, but all year long.</p>
+                    <p>An interactive workshop designed to help audiences build energy, focus, and lasting confidence. I guide teams to understand how everyday choices and intentional "trades" impact stamina, performance, and mindset.</p>
+                    <p>Through practical strategies inspired by elite performers, participants learn how to quiet self-doubt, maintain wellness, and sustain momentum throughout their careers and lives.</p>
                     
                     <div class="keynote-card-audience">
                         <strong>Ideal For:</strong> Leadership programs, emerging leaders, DEI resource groups, and teams looking to boost confidence, decision-making, and engagement
@@ -1237,8 +1308,8 @@
     <section id="speaking-clients" class="sports-bra-strength">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">Trusted By</div>
-                <h2 class="section-title">Organizations I've <span class="highlight">Empowered</span></h2>
+                <div class="section-label">Speaking Clients</div>
+                <h2 class="section-title">Organizations I've <span class="highlight">Worked With</span></h2>
             </div>
             <div class="sbs-content">
                 <div class="sbs-text">
@@ -1287,73 +1358,85 @@
                 <div class="section-label">Client Impact</div>
                 <h2 class="section-title">What <span class="highlight">Champions Say</span></h2>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Chrissy is super passionate about her craft and development of you as an athlete... I always knew she would get the best out of me even on days I didn't want to!"
+            <div class="testimonials-carousel">
+                <button class="carousel-btn prev" onclick="moveTestimonial(-1)">‹</button>
+                <div class="testimonials-wrapper">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-text">
+                            "Chrissy is super passionate about her craft and development of you as an athlete... I always knew she would get the best out of me even on days I didn't want to!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Dearica Hamby</h5>
+                                <p>USA Olympian, LA Sparks</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Dearica Hamby</h5>
-                            <p>USA Olympian, LA Sparks</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Chrissy had the rare combination of elite training expertise, endless passion for sports performance, and the ability to motivate our WNBA players to maximize their potential."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Ruth Riley</h5>
+                                <p>Former WNBA GM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "You challenged us to reflect and realign our goals to build the kind of intentional mindset that fuels long-term growth and success. The feedback from our members has been overwhelmingly positive."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Melissa Mastrodomenico</h5>
+                                <p>President, NAWBO San Antonio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Chrissy made a real impact on the women! She was quoted and referenced the rest of the day. I know that I have personally made better decisions since then."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Lisa Hansen</h5>
+                                <p>Founder, Thriving Women's Conference</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Christen, on behalf of the Illinois Human Performance Project team... Thank you! We appreciate your time, energy and expertise and we know our audience does too! We can't wait to partner again and are officially Strags fans for life!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Abbie Lee</h5>
+                                <p>Project Lead, Illinois Human Performance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Wow! Christen is incredible! I loved her talk. 'Prepare to separate.' Words to live by."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h5>Erin Callahan</h5>
+                                <p>Speech Attendee</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Chrissy had the rare combination of elite training expertise, endless passion for sports performance, and the ability to motivate our WNBA players to maximize their potential."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Ruth Riley</h5>
-                            <p>Former WNBA GM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "You challenged us to reflect and realign our goals to build the kind of intentional mindset that fuels long-term growth and success. The feedback from our members has been overwhelmingly positive."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Melissa Mastrodomenico</h5>
-                            <p>President, NAWBO San Antonio</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Chrissy made a real impact on the women! She was quoted and referenced the rest of the day. I know that I have personally made better decisions since then."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Lisa Hansen</h5>
-                            <p>Founder, Thriving Women's Conference</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Christen, on behalf of the Illinois Human Performance Project team... Thank you! We appreciate your time, energy and expertise and we know our audience does too! We can't wait to partner again and are officially Strags fans for life!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Abbie Lee</h5>
-                            <p>Project Lead, Illinois Human Performance</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Wow! Christen is incredible! I loved her talk. 'Prepare to separate.' Words to live by."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h5>Erin Callahan</h5>
-                            <p>Speech Attendee</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-btn next" onclick="moveTestimonial(1)">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentTestimonial(0)"></span>
+                <span class="dot" onclick="currentTestimonial(1)"></span>
+                <span class="dot" onclick="currentTestimonial(2)"></span>
+                <span class="dot" onclick="currentTestimonial(3)"></span>
+                <span class="dot" onclick="currentTestimonial(4)"></span>
+                <span class="dot" onclick="currentTestimonial(5)"></span>
             </div>
         </div>
     </section>
@@ -1408,9 +1491,41 @@
         }, observerOptions);
 
         // Observe all cards and sections
-        document.querySelectorAll('.credential-card, .testimonial-card, .theme-item, .client-item').forEach(el => {
+        document.querySelectorAll('.credential-card, .theme-item, .client-item').forEach(el => {
             observer.observe(el);
         });
+
+        // Testimonial Carousel
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+
+        function moveTestimonial(direction) {
+            testimonials[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            currentIndex += direction;
+            if (currentIndex >= testimonials.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = testimonials.length - 1;
+            
+            testimonials[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function currentTestimonial(index) {
+            testimonials[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            currentIndex = index;
+            
+            testimonials[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        // Auto-advance carousel every 7 seconds
+        setInterval(() => {
+            moveTestimonial(1);
+        }, 7000);
     </script>
 </body>
 </html>
