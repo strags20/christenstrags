@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Her Like a Pro — Christen Strags</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #111110;
+      --dark: #1c1b19;
+      --orange: #D4712A;
+      --orange-light: #E8883A;
+      --white: #ffffff;
+      --cream: #f7f4ef;
+      --light-grey: #f0ece5;
+      --mid-grey: #aaa69f;
+      --text: #1c1b19;
+      --text-soft: #5a5650;
+      --border: rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* HERO stays dark */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(212,113,42,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 7vw;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      min-width: 32px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 8vw, 108px);
+      line-height: 0.92;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+
+    .hero-title span { color: var(--orange); display: block; }
+
+    .hero-subtitle {
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      max-width: 480px;
+      margin-bottom: 48px;
+      line-height: 1.75;
+    }
+
+    .hero-subtitle strong { color: #fff; font-weight: 600; }
+
+    .price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .price-now {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 56px;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .price-was {
+      font-size: 22px;
+      color: rgba(255,255,255,0.25);
+      text-decoration: line-through;
+      font-weight: 300;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 20px 48px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .cta-btn::after { content: '→'; margin-left: 10px; display: inline-block; transition: transform 0.2s; }
+    .cta-btn:hover { background: var(--orange-light); transform: translateY(-2px); }
+    .cta-btn:hover::after { transform: translateX(4px); }
+
+    .trust-line { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      opacity: 0.85;
+    }
+
+    /* CREDS */
+    .creds-strip {
+      background: var(--orange);
+      padding: 18px 7vw;
+    }
+
+    .creds-inner { display: flex; gap: 48px; flex-wrap: wrap; align-items: center; }
+
+    .cred-item { display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+
+    .cred-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--black); line-height: 1; }
+
+    .cred-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.55); }
+
+    .cred-divider { width: 1px; height: 26px; background: rgba(0,0,0,0.18); }
+
+    /* SHARED */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 0.95;
+      color: var(--text);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* STORY */
+    .story-section { padding: 100px 7vw; background: var(--cream); }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: start;
+      max-width: 1100px;
+    }
+
+    .story-body p {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text-soft);
+      margin-bottom: 24px;
+    }
+
+    .story-body p strong { color: var(--text); font-weight: 600; }
+
+    .story-quote {
+      border-left: 4px solid var(--orange);
+      padding: 28px 36px;
+      margin: 44px 0;
+      background: var(--white);
+    }
+
+    .story-quote p {
+      font-size: 19px;
+      line-height: 1.75;
+      color: var(--text);
+      font-style: italic;
+      margin: 0;
+    }
+
+    .story-photo {
+      position: sticky;
+      top: 40px;
+    }
+
+    .story-photo img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .story-photo-caption {
+      font-size: 12px;
+      color: var(--mid-grey);
+      letter-spacing: 0.05em;
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+
+    /* ACTION PHOTO DIVIDER */
+    .action-photo {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .action-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    .action-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(17,17,16,0.7) 0%, rgba(17,17,16,0.1) 60%);
+      display: flex;
+      align-items: center;
+      padding: 0 7vw;
+    }
+
+    .action-photo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      color: #fff;
+      line-height: 1.05;
+      max-width: 480px;
+    }
+
+    .action-photo-text span { color: var(--orange); }
+
+    /* WIN EITHER WAY */
+    .win-section { padding: 100px 7vw; background: var(--white); }
+    .win-inner { max-width: 720px; margin: 0 auto; }
+
+    .win-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .win-card { padding: 44px 40px; background: var(--cream); }
+
+    .win-card-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      color: var(--orange);
+      opacity: 0.22;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .win-card-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 12px; line-height: 1.4; }
+    .win-card-desc { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
+
+    .win-footer {
+      margin-top: 2px;
+      background: var(--orange);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .win-footer p { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--black); letter-spacing: 0.02em; margin: 0; }
+
+    /* PROBLEMS */
+    .problems-section { padding: 100px 7vw; background: var(--black); }
+    .problems-inner { max-width: 800px; margin: 0 auto; }
+    .problems-section .section-label { color: var(--orange); }
+    .problems-section .section-title { color: #fff; }
+    .problems-intro { font-size: 16px; color: rgba(255,255,255,0.4); margin-bottom: 56px; margin-top: -24px; }
+
+    .problem-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .problem-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 32px;
+      align-items: start;
+      background: #1c1b19;
+      padding: 36px 40px;
+    }
+
+    .problem-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--orange); opacity: 0.28; line-height: 1; }
+    .problem-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .problem-desc { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.7; }
+
+    .problems-cta {
+      margin-top: 2px;
+      background: var(--orange);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .problems-cta p { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--black); letter-spacing: 0.02em; margin: 0; }
+
+    /* FEATURES */
+    .features-section { padding: 100px 7vw; background: var(--white); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+
+    .feature-card {
+      background: var(--cream);
+      padding: 40px 36px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .feature-card:hover { border-color: var(--orange); transform: translateY(-3px); }
+
+    .feature-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--orange); opacity: 0.22; line-height: 1; margin-bottom: 16px; }
+    .feature-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .feature-desc { font-size: 14px; color: var(--text-soft); line-height: 1.7; }
+
+    /* WHO */
+    .who-section {
+      padding: 100px 7vw;
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .who-list { list-style: none; display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
+
+    .who-list li { display: flex; gap: 16px; align-items: flex-start; }
+
+    .who-list li::before { content: '✓'; color: var(--orange); font-weight: 700; font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+
+    .who-list li span { font-size: 16px; color: var(--text-soft); line-height: 1.6; }
+
+    .author-block { background: var(--white); padding: 44px; border-left: 4px solid var(--orange); }
+
+    .author-block blockquote {
+      font-size: 16px;
+      color: var(--text-soft);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .author-source { font-size: 13px; color: var(--mid-grey); margin-bottom: 28px; }
+
+    .author-sig { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--text); letter-spacing: 0.05em; }
+
+    .author-title { font-size: 12px; color: var(--mid-grey); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; line-height: 1.6; }
+
+    /* BOTTOM CTA */
+    .bottom-cta {
+      padding: 120px 7vw;
+      text-align: center;
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottom-cta::before {
+      content: 'STRONGER';
+      position: absolute;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(100px, 18vw, 220px);
+      color: rgba(255,255,255,0.025);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .bottom-cta .section-label { margin-bottom: 16px; }
+    .bottom-cta .section-title { color: #fff; max-width: 560px; margin: 0 auto 20px; }
+
+    .bottom-cta-sub {
+      max-width: 500px;
+      margin: 0 auto 48px;
+      color: rgba(255,255,255,0.55);
+      font-size: 18px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .bottom-cta .price-block { justify-content: center; margin-bottom: 36px; }
+    .bottom-cta .trust-line { color: rgba(255,255,255,0.25); margin-top: 16px; }
+
+    /* FOOTER */
+    footer {
+      padding: 32px 7vw;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer p { font-size: 13px; color: rgba(255,255,255,0.22); }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 80px 6vw 40px; order: 2; }
+      .hero-right { height: 320px; order: 1; }
+      .features-grid { grid-template-columns: 1fr; }
+      .who-section { grid-template-columns: 1fr; gap: 48px; }
+      .win-grid { grid-template-columns: 1fr; }
+      .creds-inner { gap: 24px; }
+      .cred-divider { display: none; }
+      .story-grid { grid-template-columns: 1fr; gap: 48px; }
+      .story-photo { position: static; }
+      .action-photo { height: 280px; }
+    }
+
+    @media (max-width: 600px) {
+      .story-section, .win-section, .features-section, .problems-section, .who-section { padding: 72px 6vw; }
+      .bottom-cta { padding: 80px 6vw; }
+      .problem-item { grid-template-columns: 48px 1fr; gap: 16px; padding: 28px 20px; }
+      .win-card, .author-block { padding: 32px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">If you're a girls basketball coach and you're sick of seeing your athletes get injured so often, read this</div>
+      <h1 class="hero-title">
+        Train Her<br>
+        <span>Like a Pro</span>
+      </h1>
+      <p class="hero-subtitle">
+        I spent 7 seasons as a WNBA strength coach figuring this out with no roadmap — no published programs to compare mine to, no research built for women at that level. I figured it out the hard way. <strong>This guide is the shortcut I wish I'd had.</strong>
+      </p>
+      <div class="price-block">
+        <div>
+          <div class="price-now">$29</div>
+          <div class="price-label">one-time · instant download</div>
+        </div>
+        <div class="price-was">$49</div>
+      </div>
+      <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get the Guide</a>
+      <p class="trust-line">PDF download · No subscription · Yours to keep</p>
+    </div>
+
+    <div class="hero-right">
+      <img src="photo-hero.jpg" alt="Christen Strags — USA Basketball">
+    </div>
+  </section>
+
+  <!-- CREDS STRIP -->
+  <div class="creds-strip">
+    <div class="creds-inner">
+      <div class="cred-item"><span class="cred-num">7</span><span class="cred-label">WNBA Seasons</span></div>
+      <div class="cred-divider"></div>
+      <div class="cred-item"><span class="cred-num">8</span><span class="cred-label">Olympians Trained</span></div>
+      <div class="cred-divider"></div>
+      <div class="cred-item"><span class="cred-num">15+</span><span class="cred-label">All-Stars</span></div>
+      <div class="cred-divider"></div>
+      <div class="cred-item"><span class="cred-num">2</span><span class="cred-label">Hall of Famers</span></div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="story-grid">
+      <div>
+        <p class="section-label">Why I wrote this</p>
+        <h2 class="section-title">Everybody tells you to do strength and conditioning. Nobody tells you how.</h2>
+
+        <div class="story-body">
+          <p>When I started as a WNBA strength coach, I just wanted proof I was doing it right.</p>
+
+          <p>I searched everywhere for other WNBA strength programs to compare mine to. Nothing. The research on female athletes barely existed. The magazines weren't covering WNBA weight rooms. I was making decisions for professional athletes — Olympians, All-Stars — and I couldn't find a single resource built for women at that level.</p>
+
+          <p>I figured it out. And eventually, I got the validation I was looking for from the Sports Scientists with the San Antonio Spurs — one of the most respected performance organizations in professional sports. <strong>Turns out I had been doing it right all along.</strong> But I had to build that roadmap from scratch. Nobody handed it to me.</p>
+
+          <div class="story-quote">
+            <p>"The difference between good programs and great ones wasn't budget. It wasn't facilities. It was knowing what to do with the body in front of you. That knowledge shouldn't live only in professional locker rooms."</p>
+          </div>
+
+          <p>Search for a former WNBA strength coach creating programming for high school girls basketball coaches — you still won't find it. <strong>This guide is that resource.</strong> Everything I learned across 7 seasons, put in your hands so you're not guessing, not Googling, and not starting from scratch.</p>
+        </div>
+      </div>
+
+      <div class="story-photo">
+        <img src="photo-story.jpg" alt="Christen Strags working with a WNBA player courtside">
+        <p class="story-photo-caption">Courtside with the San Antonio Stars, WNBA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTION PHOTO -->
+  <div class="action-photo">
+    <img src="photo-work.jpg" alt="Christen Strags working with Dearica Hamby">
+    <div class="action-photo-overlay">
+      <div class="action-photo-text">7 seasons.<br><span>15+ All-Stars.</span><br>One guide.</div>
+    </div>
+  </div>
+
+  <!-- WIN EITHER WAY -->
+  <section class="win-section">
+    <div class="win-inner">
+      <p class="section-label">Either way, you win</p>
+      <h2 class="section-title">Honestly — there are only two ways this goes</h2>
+
+      <div class="win-grid">
+        <div class="win-card">
+          <div class="win-card-num">1</div>
+          <div class="win-card-title">It validates that you're already on the right track</div>
+          <p class="win-card-desc">You'll read it and recognize what you've been doing. You'll sleep easier at night knowing you're doing everything you can to keep your athletes healthy — and that the work you've already put in is the right work.</p>
+        </div>
+        <div class="win-card">
+          <div class="win-card-num">2</div>
+          <div class="win-card-title">It introduces you to a whole new level</div>
+          <p class="win-card-desc">You'll learn there's more you can unlock — more durability, more strength, better conditioning for your players. And you'll walk away knowing exactly how to overhaul your programming for better results starting immediately.</p>
+        </div>
+      </div>
+
+      <div class="win-footer">
+        <p>$29 either way. You can't lose.</p>
+        <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank" style="background: var(--black);">Get the Guide — $29</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 PROBLEMS -->
+  <section class="problems-section">
+    <div class="problems-inner">
+      <p class="section-label">What I see in most programs</p>
+      <h2 class="section-title">5 things that are quietly holding your athletes back</h2>
+      <p class="problems-intro">7 seasons training Olympians and All-Stars taught me what actually moves the needle for female athletes. See if any of these sound familiar.</p>
+
+      <div class="problem-list">
+        <div class="problem-item">
+          <div class="problem-num">01</div>
+          <div>
+            <div class="problem-title">Skipping the injury prevention work that actually matters for female athletes</div>
+            <div class="problem-desc">Girls tear their ACL at 2 to 8 times the rate of male athletes in the same sport. That's not bad luck — it's anatomy. And most programs aren't addressing it at all.</div>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">02</div>
+          <div>
+            <div class="problem-title">Conditioning that doesn't match what the game actually demands</div>
+            <div class="problem-desc">Too much focus on straight sprinting and mile times. Basketball is short explosive efforts with incomplete recovery — your conditioning should mirror that.</div>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">03</div>
+          <div>
+            <div class="problem-title">No structured lifting in-season</div>
+            <div class="problem-desc">Two days per week minimum — even in-season. The athletes who maintain strength through a long season are the ones who finish strong in February when everyone else is running on empty.</div>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">04</div>
+          <div>
+            <div class="problem-title">Treating recovery as optional</div>
+            <div class="problem-desc">A 2% drop in hydration causes a 10% drop in performance. Sleep drives adaptation. Your athletes are probably showing up to practice already behind — and nobody has told them why.</div>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">05</div>
+          <div>
+            <div class="problem-title">Running every player through the same program</div>
+            <div class="problem-desc">Your point guard and your post player don't play the same game. They shouldn't train identically. You're already thinking position-specific on the floor — this guide helps you extend that into the weight room.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problems-cta">
+        <p>This guide addresses every single one.</p>
+        <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank" style="background: var(--black);">Get the Guide — $29</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <p class="section-label">What's inside</p>
+    <h2 class="section-title">The things nobody ever told you about training female athletes</h2>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-title">Why Female Athletes Are Different</div>
+        <p class="feature-desc">The research has finally caught up. Female athletes aren't smaller men — they're physiologically different in ways that directly change how they should be trained. You'll understand the why for the first time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-title">The Three Tenets</div>
+        <p class="feature-desc">The framework behind every decision I made in 7 WNBA seasons: Do No Harm → Prevent Injuries → Improve Performance. In that exact order. Most programs skip straight to number three.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-title">How to Manage Your Season</div>
+        <p class="feature-desc">Off-season, pre-season, in-season, post-season — each one has a different priority. You'll learn how to structure your year so your athletes peak when it actually counts.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04</div>
+        <div class="feature-title">The Game Load Protocol</div>
+        <p class="feature-desc">In the WNBA, players over 20 minutes got a recovery session. Players under 20 got a workout. This one concept changes how you think about your athletes' bodies across a long season.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">05</div>
+        <div class="feature-title">What a Real Session Looks Like</div>
+        <p class="feature-desc">A complete 35-minute in-season session you can run on a practice day — prehab, compound lifts, core, and position work. Zero complicated equipment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">06</div>
+        <div class="feature-title">The Stuff Nobody Talks About</div>
+        <p class="feature-desc">I once texted a WNBA player a meal plan the night before a game. Her reply: "Ok thank you so much!!" She had never been told this before. Your athletes probably haven't either.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="who-section">
+    <div>
+      <p class="section-label">This is for you if</p>
+      <h2 class="section-title">Sound familiar?</h2>
+      <p style="color: var(--text-soft); font-size:17px; line-height:1.8; margin-top:16px;">Most coaches who find this guide are already doing the work. They're just doing it without a framework built specifically for female athletes. See if any of these land:</p>
+      <ul class="who-list">
+        <li><span>You coach girls basketball and wish your players didn't deal with so many injuries</span></li>
+        <li><span>You've been using the same program for years and you're not sure it's right for female athletes</span></li>
+        <li><span>You want to understand the <em>why</em> behind the training — not just a list of exercises</span></li>
+        <li><span>You know there's a next level to your coaching and this is part of getting there</span></li>
+      </ul>
+    </div>
+
+    <div class="author-block">
+      <img src="photo-author.jpg" alt="Christen Strags at USA Basketball Coach Academy" style="width:100%; display:block; aspect-ratio:4/3; object-fit:cover; object-position: center 20%; margin-bottom: 32px;">
+      <blockquote>"A lot of coaches fall into the trap of training their athletes the way they themselves were trained. I get it — you coach what you know. But the science has moved. And girls in particular need to be trained differently. Not harder, not softer — differently."</blockquote>
+      <p class="author-source">— From the guide</p>
+      <div class="author-sig">Christen Strags</div>
+      <div class="author-title">7-Season WNBA Strength Coach<br>15+ All-Stars · 8 Olympians · 2 Hall of Famers</div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <p class="section-label">$29 · Instant Download</p>
+    <h2 class="section-title">The roadmap exists now.<br>You don't have to build it from scratch.</h2>
+    <p class="bottom-cta-sub">Everything I learned across 7 WNBA seasons — about training female athletes, preventing injuries, and building programs that actually work — in one guide you can read in an afternoon.</p>
+    <div class="price-block">
+      <div>
+        <div class="price-now">$29</div>
+        <div class="price-label">one-time · instant download</div>
+      </div>
+      <div class="price-was">$49</div>
+    </div>
+    <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get Instant Access</a>
+    <p class="trust-line">PDF download · No subscription · Yours to keep</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <a href="https://christenstrags.com">Christen Strags</a> · Strags Performance Training</p>
+    <p><a href="https://christenstrags.com">christenstrags.com</a></p>
+  </footer>
+
+</body>
+</html>
