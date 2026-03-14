@@ -13,6 +13,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Train Her Like a Pro — Christen Strags</title>
+  <meta name="description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars — injury prevention, in-season lifting, conditioning, and more. $29 instant download.">
+  <link rel="canonical" href="https://christenstrags.com/bball.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://christenstrags.com/bball.html">
+  <meta property="og:title" content="Train Her Like a Pro — Christen Strags">
+  <meta property="og:description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars, now in one guide.">
+  <meta property="og:image" content="https://christenstrags.com/photo-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Train Her Like a Pro — Christen Strags">
+  <meta name="twitter:description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars, now in one guide.">
+  <meta name="twitter:image" content="https://christenstrags.com/photo-hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -131,15 +142,15 @@
     }
 
     .price-was {
-      font-size: 22px;
-      color: rgba(255,255,255,0.25);
+      font-size: 32px;
+      color: rgba(255,255,255,0.45);
       text-decoration: line-through;
       font-weight: 300;
     }
 
     .price-label {
       font-size: 13px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.65);
       letter-spacing: 0.05em;
     }
 
@@ -161,7 +172,7 @@
     .cta-btn:hover { background: var(--orange-light); transform: translateY(-2px); }
     .cta-btn:hover::after { transform: translateX(4px); }
 
-    .trust-line { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+    .trust-line { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; }
 
     .hero-right {
       position: relative;
@@ -172,7 +183,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center center;
       display: block;
       opacity: 0.85;
     }
@@ -180,7 +191,16 @@
     /* CREDS */
     .creds-strip {
       background: var(--orange);
-      padding: 18px 7vw;
+      padding: 22px 7vw;
+    }
+
+    .creds-intro {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.6);
+      margin-bottom: 12px;
     }
 
     .creds-inner { display: flex; gap: 48px; flex-wrap: wrap; align-items: center; }
@@ -289,8 +309,8 @@
       inset: 0;
       background: linear-gradient(to right, rgba(17,17,16,0.7) 0%, rgba(17,17,16,0.1) 60%);
       display: flex;
-      align-items: center;
-      padding: 0 7vw;
+      align-items: flex-start;
+      padding: 40px 7vw;
     }
 
     .action-photo-text {
@@ -304,7 +324,7 @@
     .action-photo-text span { color: var(--orange); }
 
     /* WIN EITHER WAY */
-    .win-section { padding: 100px 7vw; background: var(--white); }
+    .win-section { padding: 100px 7vw; background: var(--cream); }
     .win-inner { max-width: 720px; margin: 0 auto; }
 
     .win-grid {
@@ -346,7 +366,7 @@
     .problems-inner { max-width: 800px; margin: 0 auto; }
     .problems-section .section-label { color: var(--orange); }
     .problems-section .section-title { color: #fff; }
-    .problems-intro { font-size: 16px; color: rgba(255,255,255,0.4); margin-bottom: 56px; margin-top: -24px; }
+    .problems-intro { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 56px; margin-top: -24px; }
 
     .problem-list { display: flex; flex-direction: column; gap: 2px; }
 
@@ -361,7 +381,7 @@
 
     .problem-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--orange); opacity: 0.28; line-height: 1; }
     .problem-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-    .problem-desc { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.7; }
+    .problem-desc { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; }
 
     .problems-cta {
       margin-top: 2px;
@@ -402,11 +422,11 @@
     /* WHO */
     .who-section {
       padding: 100px 7vw;
-      background: var(--cream);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
+      background: var(--white);
+    }
+
+    .who-section > div {
+      max-width: 720px;
     }
 
     .who-list { list-style: none; display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
@@ -462,14 +482,14 @@
     .bottom-cta-sub {
       max-width: 500px;
       margin: 0 auto 48px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.8);
       font-size: 18px;
       line-height: 1.75;
       font-weight: 300;
     }
 
     .bottom-cta .price-block { justify-content: center; margin-bottom: 36px; }
-    .bottom-cta .trust-line { color: rgba(255,255,255,0.25); margin-top: 16px; }
+    .bottom-cta .trust-line { color: rgba(255,255,255,0.6); margin-top: 16px; }
 
     /* FOOTER */
     footer {
@@ -481,7 +501,7 @@
       justify-content: space-between;
     }
 
-    footer p { font-size: 13px; color: rgba(255,255,255,0.22); }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.45); }
     footer a { color: var(--orange); text-decoration: none; }
 
     /* RESPONSIVE */
@@ -490,7 +510,6 @@
       .hero-left { padding: 80px 6vw 40px; order: 2; }
       .hero-right { height: 320px; order: 1; }
       .features-grid { grid-template-columns: 1fr; }
-      .who-section { grid-template-columns: 1fr; gap: 48px; }
       .win-grid { grid-template-columns: 1fr; }
       .creds-inner { gap: 24px; }
       .cred-divider { display: none; }
@@ -504,13 +523,16 @@
       .bottom-cta { padding: 80px 6vw; }
       .problem-item { grid-template-columns: 48px 1fr; gap: 16px; padding: 28px 20px; }
       .win-card, .author-block { padding: 32px 28px; }
+      .price-block { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .hero-left .cta-btn { display: block; text-align: center; }
     }
   </style>
 </head>
 <body>
 
+  <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Train Her Like a Pro">
     <div class="hero-left">
       <div class="eyebrow">If you're a girls basketball coach and you're sick of seeing your athletes get injured so often, read this</div>
       <h1 class="hero-title">
@@ -524,18 +546,21 @@
         <div>
           <div class="price-now">$29</div>
           <div class="price-label">one-time · instant download</div>
+        </div>
+        <div class="price-was">$49</div>
       </div>
       <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get the Guide</a>
       <p class="trust-line">PDF download · No subscription · Yours to keep</p>
     </div>
 
     <div class="hero-right">
-      <img src="photo-hero.jpg" alt="Christen Strags — USA Basketball">
+      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
     </div>
   </section>
 
   <!-- CREDS STRIP -->
-  <div class="creds-strip">
+  <div class="creds-strip" role="region" aria-label="Christen Strags credentials">
+    <p class="creds-intro">Hi, I'm Christen — here's my background:</p>
     <div class="creds-inner">
       <div class="cred-item"><span class="cred-num">7</span><span class="cred-label">WNBA Seasons</span></div>
       <div class="cred-divider"></div>
@@ -555,46 +580,55 @@
         <h2 class="section-title">Everybody tells you to do strength and conditioning. Nobody tells you how.</h2>
 
         <div class="story-body">
-          <p>If you coach girls basketball, you probably spend most of your time focused on X’s and O’s — the plays, the film, the strategy.
-
-          <p>But the physical side of development is just as important.
-
-          <p>This guide breaks down how elite female basketball players are actually trained, and how those principles can apply to your program.
-          
           <p>When I started as a WNBA strength coach, I searched everywhere for other WNBA strength programs to compare mine to.</p>
 
-          <p>Nothing. The research on female athletes barely existed. The magazines weren't covering WNBA weight rooms. I was making decisions for professional athletes who were Olympians and All-Stars and I couldn't find a single resource built for women at that level.</p>
+          <p>Nothing. The research on female athletes barely existed. The magazines weren’t covering WNBA weight rooms. I was making decisions for professional athletes who were Olympians and All-Stars and I couldn’t find a single resource built for women at that level.</p>
 
           <p>I realized that if I was struggling to find answers at the professional level, coaches like you were probably left completely on your own.</p>
 
-          </p>That gap — between what we know works for elite athletes and what’s available for high school and club programs — is exactly why I built this guide.</p>
-            
-          </p>Eventually, I got the validation I was looking for from the Sports Scientists with the San Antonio Spurs, one of the most respected performance organizations in professional sports. <strong>Turns out I had been doing it right all along.</strong> But I had to build that roadmap from scratch. Nobody handed it to me.</p>
+          <p>That gap — between what we know works for elite athletes and what’s available for high school and club programs — is exactly why I built this guide.</p>
 
-          </p>But now I'm ready to hand it to you.</p>
-          
+          <p>Eventually, I got the validation I was looking for from the Sports Scientists with the San Antonio Spurs, one of the most respected performance organizations in professional sports. <strong>Turns out I had been doing it right all along.</strong> But I had to build that roadmap from scratch. Nobody handed it to me.</p>
+
+          <p>But now I’m ready to hand it to you.</p>
+
           <div class="story-quote">
-            <p>"The difference between good programs and great ones wasn't budget. It wasn't facilities. It was knowing what to do with the body in front of you. That knowledge shouldn't live only in professional locker rooms."</p>
+            <p>"The difference between good programs and great ones wasn’t budget. It wasn’t facilities. It was knowing what to do with the body in front of you. That knowledge shouldn’t live only in professional locker rooms."</p>
           </div>
 
-          <p>Search for a former WNBA strength coach creating programming for high school girls basketball coaches — you still won't find it. <strong>This guide is that resource.</strong> Everything I learned across 7 seasons, put in your hands so you're not guessing, not Googling, and not starting from scratch.</p>
+          <p>Search for a former WNBA strength coach creating programming for high school girls basketball coaches — you still won’t find it. <strong>This guide is that resource.</strong> Everything I learned across 7 seasons, put in your hands so you’re not guessing, not Googling, and not starting from scratch.</p>
         </div>
       </div>
 
       <div class="story-photo">
-        <img src="photo-story.jpg" alt="Christen Strags working with a WNBA player courtside">
-        <p class="story-photo-caption">Courtside with the San Antonio Stars, WNBA</p>
+        <img src="photo-story.jpg" alt="Christen Strags working courtside in the WNBA">
       </div>
     </div>
   </section>
 
   <!-- ACTION PHOTO -->
   <div class="action-photo">
-    <img src="photo-work.jpg" alt="Christen Strags working with Dearica Hamby">
+    <img src="photo-work.jpg" alt="Christen Strags coaching a WNBA player on the court">
     <div class="action-photo-overlay">
       <div class="action-photo-text">7 seasons.<br><span>15+ All-Stars.</span><br>One guide.</div>
     </div>
   </div>
+
+  <!-- WHO IT’S FOR -->
+  <section class="who-section">
+    <div>
+      <p class="section-label">This is for you if</p>
+      <h2 class="section-title">Sound familiar?</h2>
+      <p style="color: var(--text-soft); font-size:17px; line-height:1.8; margin-top:16px;">Most coaches who find this guide are already doing the work. They’re just doing it without a framework built specifically for female athletes. See if any of these land:</p>
+      <ul class="who-list">
+        <li><span>You coach girls basketball and wish your players didn’t deal with so many injuries</span></li>
+        <li><span>You’ve been using the same program for years and you’re not sure it’s right for female athletes</span></li>
+        <li><span>You want to understand the <em>why</em> behind the training — not just a list of exercises</span></li>
+        <li><span>You know there’s a next level to your coaching and this is part of getting there</span></li>
+      </ul>
+    </div>
+
+  </section>
 
   <!-- WIN EITHER WAY -->
   <section class="win-section">
@@ -605,18 +639,17 @@
       <div class="win-grid">
         <div class="win-card">
           <div class="win-card-num">1</div>
-          <div class="win-card-title">It validates that you're already on the right track</div>
-          <p class="win-card-desc">You'll read it and recognize what you've been doing. You'll sleep easier at night knowing you're doing everything you can to keep your athletes healthy — and that the work you've already put in is the right work.</p>
+          <div class="win-card-title">It validates that you’re already on the right track</div>
+          <p class="win-card-desc">You’ll read it and recognize what you’ve been doing. You’ll sleep easier at night knowing you’re doing everything you can to keep your athletes healthy — and that the work you’ve already put in is the right work.</p>
         </div>
         <div class="win-card">
           <div class="win-card-num">2</div>
           <div class="win-card-title">It introduces you to a whole new level</div>
-          <p class="win-card-desc">You'll learn there's more you can unlock — more durability, more strength, better conditioning for your players. And you'll walk away knowing exactly how to overhaul your programming for better results starting immediately.</p>
+          <p class="win-card-desc">You’ll learn there’s more you can unlock — more durability, more strength, better conditioning for your players. And you’ll walk away knowing exactly how to overhaul your programming for better results starting immediately.</p>
         </div>
       </div>
 
       <div class="win-footer">
-        <p>$29 either way. You can't lose.</p>
         <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank" style="background: var(--black);">Get the Guide — $29</a>
       </div>
     </div>
@@ -634,13 +667,13 @@
           <div class="problem-num">01</div>
           <div>
             <div class="problem-title">Skipping the injury prevention work that actually matters for female athletes</div>
-            <div class="problem-desc">Girls tear their ACL at 2 to 8 times the rate of male athletes in the same sport. That's not bad luck — it's anatomy. And most programs aren't addressing it at all.</div>
+            <div class="problem-desc">Girls tear their ACL at 2 to 8 times the rate of male athletes in the same sport. That’s not bad luck — it’s anatomy. And most programs aren’t addressing it at all.</div>
           </div>
         </div>
         <div class="problem-item">
           <div class="problem-num">02</div>
           <div>
-            <div class="problem-title">Conditioning that doesn't match what the game actually demands</div>
+            <div class="problem-title">Conditioning that doesn’t match what the game actually demands</div>
             <div class="problem-desc">Too much focus on straight sprinting and mile times. Basketball is short explosive efforts with incomplete recovery — your conditioning should mirror that.</div>
           </div>
         </div>
@@ -662,7 +695,7 @@
           <div class="problem-num">05</div>
           <div>
             <div class="problem-title">Running every player through the same program</div>
-            <div class="problem-desc">Your point guard and your post player don't play the same game. They shouldn't train identically. You're already thinking position-specific on the floor — this guide helps you extend that into the weight room.</div>
+            <div class="problem-desc">Your point guard and your post player don’t play the same game. They shouldn’t train identically. You’re already thinking position-specific on the floor — this guide helps you extend that into the weight room.</div>
           </div>
         </div>
       </div>
@@ -676,14 +709,14 @@
 
   <!-- FEATURES -->
   <section class="features-section">
-    <p class="section-label">What's inside</p>
+    <p class="section-label">What’s inside</p>
     <h2 class="section-title">The things nobody ever told you about training female athletes</h2>
 
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-num">01</div>
         <div class="feature-title">Why Female Athletes Are Different</div>
-        <p class="feature-desc">The research has finally caught up. Female athletes aren't smaller men — they're physiologically different in ways that directly change how they should be trained. You'll understand the why for the first time.</p>
+        <p class="feature-desc">The research has finally caught up. Female athletes aren’t smaller men — they’re physiologically different in ways that directly change how they should be trained. You’ll understand the why for the first time.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">02</div>
@@ -698,40 +731,18 @@
       <div class="feature-card">
         <div class="feature-num">04</div>
         <div class="feature-title">How to Manage Your Season</div>
-        <p class="feature-desc">Off-season, pre-season, in-season, post-season — each one has a different priority. You'll learn how to structure your year so your athletes peak when it actually counts.</p>
+        <p class="feature-desc">Off-season, pre-season, in-season, post-season — each one has a different priority. You’ll learn how to structure your year so your athletes peak when it actually counts.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">05</div>
         <div class="feature-title">The Game Load Protocol</div>
-        <p class="feature-desc">In the WNBA, players over 20 minutes got a recovery session. Players under 20 got a workout. This one concept changes how you think about your athletes' bodies across a long season.</p>
+        <p class="feature-desc">In the WNBA, players over 20 minutes got a recovery session. Players under 20 got a workout. This one concept changes how you think about your athletes’ bodies across a long season.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">06</div>
         <div class="feature-title">What a Real Session Looks Like</div>
         <p class="feature-desc">A complete 35-minute in-season session you can run on a practice day — prehab, compound lifts, core, and position work. Zero complicated equipment.</p>
-     /div>
-    </div>
-  </section>
-
-  <!-- WHO IT'S FOR -->
-  <section class="who-section">
-    <div>
-      <p class="section-label">This is for you if</p>
-      <h2 class="section-title">Sound familiar?</h2>
-      <p style="color: var(--text-soft); font-size:17px; line-height:1.8; margin-top:16px;">Most coaches who find this guide are already doing the work. They're just doing it without a framework built specifically for female athletes. See if any of these land:</p>
-      <ul class="who-list">
-        <li><span>You coach girls basketball and wish your players didn't deal with so many injuries</span></li>
-        <li><span>You've been using the same program for years and you're not sure it's right for female athletes</span></li>
-        <li><span>You want to understand the <em>why</em> behind the training — not just a list of exercises</span></li>
-        <li><span>You know there's a next level to your coaching and this is part of getting there</span></li>
-      </ul>
-    </div>
-
-    <div class="author-block">
-      <img src="photo-author.jpg" alt="Christen Strags at USA Basketball Coach Academy" style="width:100%; display:block; aspect-ratio:4/3; object-fit:cover; object-position: center 20%; margin-bottom: 32px;">
-      <blockquote>"A lot of coaches fall into the trap of training their athletes the way they themselves were trained. I get it — you coach what you know. But the science has moved. And girls in particular need to be trained differently. Not harder, not softer — differently."</blockquote>
-      <div class="author-sig">Christen Strags</div>
-      <div class="author-title">7-Season WNBA Strength Coach<br>15+ All-Stars · 8 Olympians · 2 Hall of Famers</div>
+      </div>
     </div>
   </section>
 
@@ -751,6 +762,8 @@
     
     <p class="trust-line">If your program is serious about improving how your athletes train, I also offer strength program audits and consulting for teams.</p>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
