@@ -68,7 +68,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(212,113,42,0.10) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 80% at 30% 50%, rgba(212,113,42,0.10) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -76,7 +76,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 60px 80px 7vw;
+      padding: 80px 7vw 80px 60px;
       position: relative;
       z-index: 2;
     }
@@ -116,8 +116,17 @@
 
     .hero-title span { color: var(--orange); display: block; }
 
-    .hero-subtitle {
+    .hero-subtitle-top {
       font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      max-width: 480px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
       font-weight: 300;
       color: rgba(255,255,255,0.65);
       max-width: 480px;
@@ -125,13 +134,18 @@
       line-height: 1.75;
     }
 
-    .hero-subtitle strong { color: #fff; font-weight: 600; }
-
     .price-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 36px;
+    }
+
+    .price-row {
       display: flex;
       align-items: baseline;
       gap: 16px;
-      margin-bottom: 36px;
     }
 
     .price-now {
@@ -183,7 +197,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center top;
       display: block;
       opacity: 0.85;
     }
@@ -354,7 +368,7 @@
       padding: 28px 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
     }
@@ -489,7 +503,9 @@
     }
 
     .bottom-cta .price-block { justify-content: center; margin-bottom: 36px; }
-    .bottom-cta .trust-line { color: rgba(255,255,255,0.6); margin-top: 16px; }
+    .bottom-cta .trust-line { color: rgba(255,255,255,0.6); margin-top: 48px; }
+    .bottom-cta .trust-line a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+    .bottom-cta .trust-line a:hover { color: #fff; }
 
     /* FOOTER */
     footer {
@@ -533,35 +549,33 @@
   <main>
   <!-- HERO -->
   <section class="hero" aria-label="Train Her Like a Pro">
+    <div class="hero-right">
+      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
+    </div>
+
     <div class="hero-left">
-      <div class="eyebrow">If you're a girls basketball coach and you're sick of seeing your athletes get injured so often, read this</div>
+      <div class="eyebrow">If you’re a girls basketball coach and you’re sick of seeing your athletes get injured so often, read this</div>
       <h1 class="hero-title">
         Train Her<br>
         <span>Like a Pro</span>
       </h1>
-      <p class="hero-subtitle">
-        <strong>A WNBA Strength Coach’s Guide for High School Girls Basketball Coaches:</strong> Learn how elite female basketball players are trained — and what high school coaches can take from it.
-      </p>
+      <p class="hero-subtitle-top">A WNBA Strength Coach’s Guide for High School Girls Basketball Coaches</p>
+      <p class="hero-subtitle">Learn how elite female basketball players are trained and what high school coaches can learn from it.</p>
       <div class="price-block">
-        <div>
+        <div class="price-row">
           <div class="price-now">$29</div>
-          <div class="price-label">one-time · instant download</div>
+          <div class="price-was">$49</div>
         </div>
-        <div class="price-was">$49</div>
+        <div class="price-label">one-time · instant download</div>
       </div>
       <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get the Guide</a>
       <p class="trust-line">PDF download · No subscription · Yours to keep</p>
-    </div>
-
-    <div class="hero-right">
-      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
     </div>
   </section>
 
   <!-- CREDS STRIP -->
   <div class="creds-strip" role="region" aria-label="Christen Strags credentials">
-    <p class="creds-intro">Hi, I'm Christen — here's my background:</p>
-    <div class="creds-inner">
+<div class="creds-inner">
       <div class="cred-item"><span class="cred-num">7</span><span class="cred-label">WNBA Seasons</span></div>
       <div class="cred-divider"></div>
       <div class="cred-item"><span class="cred-num">8</span><span class="cred-label">Olympians Trained</span></div>
@@ -588,7 +602,8 @@
 
           <p>That gap — between what we know works for elite athletes and what’s available for high school and club programs — is exactly why I built this guide.</p>
 
-          <p>Eventually, I got the validation I was looking for from the Sports Scientists with the San Antonio Spurs, one of the most respected performance organizations in professional sports. <strong>Turns out I had been doing it right all along.</strong> But I had to build that roadmap from scratch. Nobody handed it to me.</p>
+          <p>Eventually, I got the validation I was looking for from the Sports Scientists with the San Antonio Spurs, one of the most respected performance organizations in professional sports.</p>
+          <p>Turns out I had been doing it right all along. But I had to build that roadmap from scratch. Nobody handed it to me.</p>
 
           <p>But now I’m ready to hand it to you.</p>
 
@@ -596,7 +611,8 @@
             <p>"The difference between good programs and great ones wasn’t budget. It wasn’t facilities. It was knowing what to do with the body in front of you. That knowledge shouldn’t live only in professional locker rooms."</p>
           </div>
 
-          <p>Search for a former WNBA strength coach creating programming for high school girls basketball coaches — you still won’t find it. <strong>This guide is that resource.</strong> Everything I learned across 7 seasons, put in your hands so you’re not guessing, not Googling, and not starting from scratch.</p>
+          <p>Search for a former WNBA strength coach creating programming for high school girls basketball coaches — you still won’t find it.</p>
+          <p>This guide is that resource. Everything I learned across 7 seasons, put in your hands so you’re not guessing, not Googling, and not starting from scratch.</p>
         </div>
       </div>
 
@@ -614,12 +630,51 @@
     </div>
   </div>
 
+  <!-- FEATURES -->
+  <section class="features-section">
+    <p class="section-label">What’s inside</p>
+    <h2 class="section-title">The things nobody ever told you about training female athletes</h2>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-title">Why Female Athletes Are Different</div>
+        <p class="feature-desc">The research has finally caught up. Female athletes aren’t smaller men — they’re physiologically different in ways that directly change how they should be trained. You’ll understand the why for the first time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-title">The Three Tenets</div>
+        <p class="feature-desc">The framework behind every decision I made in 7 WNBA seasons: Do No Harm → Prevent Injuries → Improve Performance. In that exact order. Most programs skip straight to number three.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-title">The Most Important Weight Room Exercises</div>
+        <p class="feature-desc">Learn the exercises that should be included in nearly every single weight room session.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04</div>
+        <div class="feature-title">How to Manage Your Season</div>
+        <p class="feature-desc">Off-season, pre-season, in-season, post-season — each one has a different priority. You’ll learn how to structure your year so your athletes peak when it actually counts.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">05</div>
+        <div class="feature-title">The Game Load Protocol</div>
+        <p class="feature-desc">In the WNBA, players over 20 minutes got a recovery session. Players under 20 got a workout. This one concept changes how you think about your athletes’ bodies across a long season.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">06</div>
+        <div class="feature-title">What a Real Session Looks Like</div>
+        <p class="feature-desc">A complete 35-minute in-season session you can run on a practice day — prehab, compound lifts, core, and position work. Zero complicated equipment.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- WHO IT’S FOR -->
   <section class="who-section">
     <div>
-      <p class="section-label">This is for you if</p>
+      <p class="section-label">Does this</p>
       <h2 class="section-title">Sound familiar?</h2>
-      <p style="color: var(--text-soft); font-size:17px; line-height:1.8; margin-top:16px;">Most coaches who find this guide are already doing the work. They’re just doing it without a framework built specifically for female athletes. See if any of these land:</p>
+      <p style="color: var(--text-soft); font-size:17px; line-height:1.8; margin-top:16px;">Most coaches who find this guide are already doing the work. They’re just doing it without a framework built specifically for female athletes. This is for you if:</p>
       <ul class="who-list">
         <li><span>You coach girls basketball and wish your players didn’t deal with so many injuries</span></li>
         <li><span>You’ve been using the same program for years and you’re not sure it’s right for female athletes</span></li>
@@ -630,37 +685,12 @@
 
   </section>
 
-  <!-- WIN EITHER WAY -->
-  <section class="win-section">
-    <div class="win-inner">
-      <p class="section-label">Either way, you win</p>
-      <h2 class="section-title">Honestly — there are only two ways this goes</h2>
-
-      <div class="win-grid">
-        <div class="win-card">
-          <div class="win-card-num">1</div>
-          <div class="win-card-title">It validates that you’re already on the right track</div>
-          <p class="win-card-desc">You’ll read it and recognize what you’ve been doing. You’ll sleep easier at night knowing you’re doing everything you can to keep your athletes healthy — and that the work you’ve already put in is the right work.</p>
-        </div>
-        <div class="win-card">
-          <div class="win-card-num">2</div>
-          <div class="win-card-title">It introduces you to a whole new level</div>
-          <p class="win-card-desc">You’ll learn there’s more you can unlock — more durability, more strength, better conditioning for your players. And you’ll walk away knowing exactly how to overhaul your programming for better results starting immediately.</p>
-        </div>
-      </div>
-
-      <div class="win-footer">
-        <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank" style="background: var(--black);">Get the Guide — $29</a>
-      </div>
-    </div>
-  </section>
-
   <!-- 5 PROBLEMS -->
   <section class="problems-section">
     <div class="problems-inner">
       <p class="section-label">What I see in most programs</p>
       <h2 class="section-title">5 things that are quietly holding your athletes back</h2>
-      <p class="problems-intro">7 seasons training Olympians and All-Stars taught me what actually moves the needle for female athletes. See if any of these sound familiar.</p>
+      <p class="problems-intro">7 seasons training Olympians and All-Stars taught me what actually moves the needle for female athletes. Here are 5 things I see in girls basketball strength programs that need to change:</p>
 
       <div class="problem-list">
         <div class="problem-item">
@@ -707,41 +737,27 @@
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features-section">
-    <p class="section-label">What’s inside</p>
-    <h2 class="section-title">The things nobody ever told you about training female athletes</h2>
+  <!-- WIN EITHER WAY -->
+  <section class="win-section">
+    <div class="win-inner">
+      <p class="section-label">Either way, you win</p>
+      <h2 class="section-title">Honestly — there are only two ways this goes</h2>
 
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-num">01</div>
-        <div class="feature-title">Why Female Athletes Are Different</div>
-        <p class="feature-desc">The research has finally caught up. Female athletes aren’t smaller men — they’re physiologically different in ways that directly change how they should be trained. You’ll understand the why for the first time.</p>
+      <div class="win-grid">
+        <div class="win-card">
+          <div class="win-card-num">1</div>
+          <div class="win-card-title">It validates that you’re already on the right track</div>
+          <p class="win-card-desc">You’ll read it and recognize what you’ve been doing. You’ll sleep easier at night knowing you’re doing everything you can to keep your athletes healthy — and that the work you’ve already put in is the right work.</p>
+        </div>
+        <div class="win-card">
+          <div class="win-card-num">2</div>
+          <div class="win-card-title">It introduces you to a whole new level</div>
+          <p class="win-card-desc">You’ll learn there’s more you can unlock — more durability, more strength, better conditioning for your players. And you’ll walk away knowing exactly how to overhaul your programming for better results starting immediately.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">02</div>
-        <div class="feature-title">The Three Tenets</div>
-        <p class="feature-desc">The framework behind every decision I made in 7 WNBA seasons: Do No Harm → Prevent Injuries → Improve Performance. In that exact order. Most programs skip straight to number three.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">03</div>
-        <div class="feature-title">The Most Important Weight Room Exercises</div>
-        <p class="feature-desc">Learn the exercises that should be included in nearly every single weight room session.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">04</div>
-        <div class="feature-title">How to Manage Your Season</div>
-        <p class="feature-desc">Off-season, pre-season, in-season, post-season — each one has a different priority. You’ll learn how to structure your year so your athletes peak when it actually counts.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">05</div>
-        <div class="feature-title">The Game Load Protocol</div>
-        <p class="feature-desc">In the WNBA, players over 20 minutes got a recovery session. Players under 20 got a workout. This one concept changes how you think about your athletes’ bodies across a long season.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">06</div>
-        <div class="feature-title">What a Real Session Looks Like</div>
-        <p class="feature-desc">A complete 35-minute in-season session you can run on a practice day — prehab, compound lifts, core, and position work. Zero complicated equipment.</p>
+
+      <div class="win-footer">
+        <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank" style="background: var(--black);">Get the Guide — $29</a>
       </div>
     </div>
   </section>
@@ -760,7 +776,7 @@
     </div>
     <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get Instant Access</a>
     
-    <p class="trust-line">If your program is serious about improving how your athletes train, I also offer strength program audits and consulting for teams.</p>
+    <p class="trust-line">If your program is serious about improving how your athletes train, I also offer strength program audits and consulting for teams. <a href="mailto:info@christenstrags.com">Click here to get in touch.</a></p>
   </section>
 
   </main>
