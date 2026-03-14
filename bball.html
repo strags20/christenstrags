@@ -129,9 +129,16 @@
 
     .price-block {
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 36px;
+    }
+
+    .price-row {
+      display: flex;
       align-items: baseline;
       gap: 16px;
-      margin-bottom: 36px;
     }
 
     .price-now {
@@ -547,11 +554,11 @@
         <strong>A WNBA Strength Coach’s Guide for High School Girls Basketball Coaches:</strong> Learn how elite female basketball players are trained — and what high school coaches can take from it.
       </p>
       <div class="price-block">
-        <div>
+        <div class="price-row">
           <div class="price-now">$29</div>
-          <div class="price-label">one-time · instant download</div>
+          <div class="price-was">$49</div>
         </div>
-        <div class="price-was">$49</div>
+        <div class="price-label">one-time · instant download</div>
       </div>
       <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get the Guide</a>
       <p class="trust-line">PDF download · No subscription · Yours to keep</p>
