@@ -13,6 +13,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Train Her Like a Pro — Christen Strags</title>
+  <meta name="description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars — injury prevention, in-season lifting, conditioning, and more. $29 instant download.">
+  <link rel="canonical" href="https://christenstrags.com/bball.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://christenstrags.com/bball.html">
+  <meta property="og:title" content="Train Her Like a Pro — Christen Strags">
+  <meta property="og:description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars, now in one guide.">
+  <meta property="og:image" content="https://christenstrags.com/photo-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Train Her Like a Pro — Christen Strags">
+  <meta name="twitter:description" content="A WNBA strength coach's guide for high school girls basketball coaches. 7 seasons training Olympians and All-Stars, now in one guide.">
+  <meta name="twitter:image" content="https://christenstrags.com/photo-hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
@@ -180,7 +191,16 @@
     /* CREDS */
     .creds-strip {
       background: var(--orange);
-      padding: 18px 7vw;
+      padding: 22px 7vw;
+    }
+
+    .creds-intro {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.6);
+      margin-bottom: 12px;
     }
 
     .creds-inner { display: flex; gap: 48px; flex-wrap: wrap; align-items: center; }
@@ -403,10 +423,10 @@
     .who-section {
       padding: 100px 7vw;
       background: var(--white);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
+    }
+
+    .who-section > div {
+      max-width: 720px;
     }
 
     .who-list { list-style: none; display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
@@ -490,7 +510,6 @@
       .hero-left { padding: 80px 6vw 40px; order: 2; }
       .hero-right { height: 320px; order: 1; }
       .features-grid { grid-template-columns: 1fr; }
-      .who-section { grid-template-columns: 1fr; gap: 48px; }
       .win-grid { grid-template-columns: 1fr; }
       .creds-inner { gap: 24px; }
       .cred-divider { display: none; }
@@ -511,8 +530,9 @@
 </head>
 <body>
 
+  <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Train Her Like a Pro">
     <div class="hero-left">
       <div class="eyebrow">If you're a girls basketball coach and you're sick of seeing your athletes get injured so often, read this</div>
       <h1 class="hero-title">
@@ -534,12 +554,13 @@
     </div>
 
     <div class="hero-right">
-      <img src="photo-hero.jpg" alt="Christen Strags — USA Basketball">
+      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
     </div>
   </section>
 
   <!-- CREDS STRIP -->
-  <div class="creds-strip">
+  <div class="creds-strip" role="region" aria-label="Christen Strags credentials">
+    <p class="creds-intro">Hi, I'm Christen — here's my background:</p>
     <div class="creds-inner">
       <div class="cred-item"><span class="cred-num">7</span><span class="cred-label">WNBA Seasons</span></div>
       <div class="cred-divider"></div>
@@ -580,15 +601,14 @@
       </div>
 
       <div class="story-photo">
-        <img src="photo-story.jpg" alt="Christen Strags working with a WNBA player courtside">
-        <p class="story-photo-caption">Courtside with the San Antonio Stars, WNBA</p>
+        <img src="photo-story.jpg" alt="Christen Strags working courtside in the WNBA">
       </div>
     </div>
   </section>
 
   <!-- ACTION PHOTO -->
   <div class="action-photo">
-    <img src="photo-work.jpg" alt="Christen Strags working with Dearica Hamby">
+    <img src="photo-work.jpg" alt="Christen Strags coaching a WNBA player on the court">
     <div class="action-photo-overlay">
       <div class="action-photo-text">7 seasons.<br><span>15+ All-Stars.</span><br>One guide.</div>
     </div>
@@ -608,12 +628,6 @@
       </ul>
     </div>
 
-    <div class="author-block">
-      <img src="photo-author.jpg" alt="Christen Strags at USA Basketball Coach Academy" style="width:100%; display:block; aspect-ratio:4/3; object-fit:cover; object-position: center 20%; margin-bottom: 32px;">
-      <blockquote>"A lot of coaches fall into the trap of training their athletes the way they themselves were trained. I get it — you coach what you know. But the science has moved. And girls in particular need to be trained differently. Not harder, not softer — differently."</blockquote>
-      <div class="author-sig">Christen Strags</div>
-      <div class="author-title">7-Season WNBA Strength Coach<br>15+ All-Stars · 8 Olympians · 2 Hall of Famers</div>
-    </div>
   </section>
 
   <!-- WIN EITHER WAY -->
@@ -748,6 +762,8 @@
     
     <p class="trust-line">If your program is serious about improving how your athletes train, I also offer strength program audits and consulting for teams.</p>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
