@@ -68,7 +68,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(212,113,42,0.10) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 80% at 30% 50%, rgba(212,113,42,0.10) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -76,7 +76,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 60px 80px 7vw;
+      padding: 80px 7vw 80px 60px;
       position: relative;
       z-index: 2;
     }
@@ -183,7 +183,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center top;
       display: block;
       opacity: 0.85;
     }
@@ -533,8 +533,12 @@
   <main>
   <!-- HERO -->
   <section class="hero" aria-label="Train Her Like a Pro">
+    <div class="hero-right">
+      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
+    </div>
+
     <div class="hero-left">
-      <div class="eyebrow">If you're a girls basketball coach and you're sick of seeing your athletes get injured so often, read this</div>
+      <div class="eyebrow">If you’re a girls basketball coach and you’re sick of seeing your athletes get injured so often, read this</div>
       <h1 class="hero-title">
         Train Her<br>
         <span>Like a Pro</span>
@@ -551,10 +555,6 @@
       </div>
       <a class="cta-btn" href="https://stragsperformancetraining.myshopify.com/products/train-her-like-a-pro" target="_blank">Get the Guide</a>
       <p class="trust-line">PDF download · No subscription · Yours to keep</p>
-    </div>
-
-    <div class="hero-right">
-      <img src="photo-hero.jpg" alt="Christen Strags, WNBA strength coach">
     </div>
   </section>
 
