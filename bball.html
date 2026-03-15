@@ -247,6 +247,58 @@
       margin-bottom: 48px;
     }
 
+    /* TESTIMONIALS */
+    .testimonial-section {
+      padding: 64px 7vw;
+    }
+
+    .testimonial-section.dark {
+      background: var(--black);
+    }
+
+    .testimonial-section.light {
+      background: var(--cream);
+    }
+
+    .testimonial-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      border-left: 4px solid var(--orange);
+      padding-left: 36px;
+    }
+
+    .testimonial-section.dark .testimonial-inner blockquote {
+      font-size: 19px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-section.light .testimonial-inner blockquote {
+      font-size: 19px;
+      line-height: 1.8;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-attr {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .testimonial-section.dark .testimonial-attr { color: var(--orange); }
+    .testimonial-section.light .testimonial-attr { color: var(--mid-grey); }
+
+    @media (max-width: 600px) {
+      .testimonial-section { padding: 48px 6vw; }
+      .testimonial-inner { padding-left: 24px; }
+      .testimonial-inner blockquote { font-size: 17px; }
+    }
+
     /* STORY */
     .story-section { padding: 100px 7vw; background: var(--cream); }
 
@@ -588,6 +640,14 @@
     </div>
   </div>
 
+  <!-- RUTH RILEY QUOTE -->
+  <section class="testimonial-section dark">
+    <div class="testimonial-inner">
+      <blockquote>"Christen had the rare combination of elite training expertise, endless passion for sports performance, and the ability to motivate our WNBA players to maximize their potential."</blockquote>
+      <p class="testimonial-attr">Ruth Riley — Former WNBA GM, Olympian, Women's Basketball Hall of Fame</p>
+    </div>
+  </section>
+
   <!-- STORY -->
   <section class="story-section">
     <div class="story-grid">
@@ -680,6 +740,14 @@
       </ul>
     </div>
 
+  </section>
+
+  <!-- DEARICA HAMBY QUOTE -->
+  <section class="testimonial-section light">
+    <div class="testimonial-inner">
+      <blockquote>"Christen is super passionate about her craft and development of you as an athlete... I always knew she would get the best out of me even on days I didn't want to!"</blockquote>
+      <p class="testimonial-attr">Dearica Hamby — USA Olympian, LA Sparks</p>
+    </div>
   </section>
 
   <!-- 5 PROBLEMS -->
